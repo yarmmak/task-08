@@ -27,9 +27,9 @@ public class ApiHandler implements RequestHandler<Object, String> {
 		OpenMeteoApiClient openMeteoApiClient = new OpenMeteoApiClient();
 		LambdaLogger logger = context.getLogger();
 
-		String apiResult = openMeteoApiClient.getTokyoWeather();
+		String apiResult = openMeteoApiClient.getWeather();
 
-		logger.log(String.format("Weather in Tokyo: %s", apiResult));
+		logger.log(String.format("Weather: %s", apiResult));
 		return apiResult;
 	}
 }
